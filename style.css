@@ -1,0 +1,244 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+  /* background-image: url(https://images.unsplash.com/photo-1629757509637-7c99379d6d26?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); */
+  background-image: url(https://images.unsplash.com/photo-1497864149936-d3163f0c0f4b?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white
+
+}
+.baground{
+  text-decoration: none;
+}
+header {
+  background: #333;
+  color: #fff;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+.FristSection{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.sectionName{
+    cursor: move;
+    background: linear-gradient(145deg, #2a2a2a, #383838); 
+    border: 2px solid;
+}
+
+.sectionName:hover{
+  animation: infinite;
+
+}
+
+.Secondsec{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.para{
+  /* display: contents; */
+  justify-content: center;
+  align-items: center;
+  width: 900px;
+  padding: 20px;
+  
+}
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+}
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+.section {
+  padding: 60px 20px;
+  text-align: center;
+  /* color: black; */
+}
+
+.Projectsection{
+  color: black;
+}
+.highlight {
+  color: #00bcd4;
+}
+.skills-bar .bar {
+  width: 80%;
+  background: #eee;
+  margin: 10px auto;
+  height: 20px;
+  border-radius: 10px;
+}
+.skills-bar .progress {
+  height: 100%;
+  background: #00bcd4;
+  border-radius: 10px;
+}
+.project-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.project-card {
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  width: 150px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+.project-card:hover {
+  transform: scale(1.05);
+}
+.ProjectName{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 30px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  max-width: 400px;
+  margin: auto;
+}
+form input, form textarea {
+  margin: 10px 0;
+  padding: 10px;
+}
+form button {
+  padding: 10px;
+  background: #00bcd4;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #444;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 100%;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
+  }
+}
+.contact-section {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 40px auto;
+  gap: 40px;
+  padding: 90px;
+}
+
+/* Left side info */
+.contact-info {
+  flex: 1 1 300px;
+}
+.contact-info h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.info-list {
+  list-style: none;
+  margin-bottom: 20px;
+}
+.info-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.icon {
+  margin-right: 8px;
+  color: #f24;
+}
+.social-icons a {
+  display: inline-block;
+  font-size: 1.5rem;
+  margin-right: 15px;
+  color: #eee;
+}
+.social-icons a:hover {
+  color: #f24;
+}
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  margin-top: 20px;
+  background: #f24;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.btn:hover {
+  background: #c0eec0;
+}
+
+/* Right side form */
+.contact-form {
+  flex: 1 1 300px;
+}
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+.contact-form input,
+.contact-form textarea {
+  background: whitesmoke;
+  border: none;
+  border-radius: 4px;
+  padding: 12px;
+  margin-bottom: 15px;
+  color: #eee;
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: black;
+}
+.submit-btn {
+  align-self: flex-start;
+}

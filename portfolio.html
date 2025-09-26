@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: linear-gradient(135deg, #ece9e6, #ffffff);
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #007bff;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      animation: fadeInDown 1s ease-out;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      background: #0056b3;
+      padding: 1rem 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffdd57;
+    }
+
+    section {
+      padding: 3rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+      animation: fadeInUp 1.2s ease;
+    }
+
+    .card {
+      background: white;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 1rem;
+    }
+
+    ul li::before {
+      content: "✅ ";
+      color: #007bff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #007bff;
+      color: white;
+    }
+
+    .contact a {
+      display: inline-block;
+      margin: 0.5rem;
+      text-decoration: none;
+      color: #007bff;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .contact a:hover {
+      color: #ff5733;
+    }
+
+    #topBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 50%;
+      font-size: 18px;
+      cursor: pointer;
+      display: none;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Sampada Singewad</h1>
+    <p>Frontend Developer | BCA Graduate | Learner</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <div class="card">
+      <h2>About Me</h2>
+      <p>Hello! I’m Sampada, a passionate frontend developer with a strong foundation in HTML, CSS, JavaScript, and a keen eye for clean UI design and animations.</p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="card">
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML5, CSS3, JavaScript</li>
+        <li>Bootstrap, Tailwind CSS</li>
+        <li>React JS, Git & GitHub</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="card">
+      <h2>Projects</h2>
+      <ul>
+        <li>✔ Weather App – Fetches live weather using OpenWeatherMap API</li>
+        <li>✔ Portfolio Website – Responsive personal website with animations</li>
+        <li>✔ Task Manager – Simple to-do app using React & local storage</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="card contact">
+      <h2>Contact Me</h2>
+      <p>Feel free to reach out via:</p>
+      <a href="mailto:sampada@example.com">📧 sampada@example.com</a>
+      <a href="https://github.com/sampadagit" target="_blank">💻 GitHub</a>
+      <a href="https://linkedin.com/in/sampada" target="_blank">🔗 LinkedIn</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Sampada Singewad. All rights reserved.</p>
+  </footer>
+
+  <button id="topBtn" title="Go to top">↑</button>
+
+  <script>
+    // Show scroll-to-top button
+    const topBtn = document.getElementById("topBtn");
+    window.onscroll = function() {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        topBtn.style.display = "block";
+      } else {
+        topBtn.style.display = "none";
+      }
+    };
+
+    // Scroll to top
+    topBtn.onclick = function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+  </script>
+</body>
+</html>
